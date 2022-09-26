@@ -12,8 +12,9 @@ export default function Home() {
   return (
     <>
       {
-        recommendations.map(recommendation => (
+        recommendations.map((recommendation, index) => (
           <Recommendation
+            data-test-id="test-random-recommendations"
             key={recommendation.id}
             {...recommendation}
             onUpvote={() => listRecommendations()}
