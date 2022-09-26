@@ -61,8 +61,6 @@ describe("GET /", () => {
 
     cy.intercept("GET", BACKBASE_URL).as("recommendations");
 
-
-
     cy.request("GET", BACKBASE_URL);
 
     cy.wait("@recommendations").then((interception) => {
